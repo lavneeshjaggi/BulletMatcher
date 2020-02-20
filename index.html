@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<head>
+    <title>Forensic Hackathon</title>
+
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/stylesheet.css">
+
+    <!-- Make Slider Compatible With All Browsers -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" 
+    type="text/javascript" async></script>
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggle" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <i class="fa fa-bars"></i>
+            </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="toggle">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link rounded" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link rounded" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link rounded" href="#">Instructions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link rounded" href="#">Bullet Land Surface</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link rounded" href="#">Uplaod Images</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="landing-header">
+ 		<h1>Welcome to Bullet <span>Matcher</span></h1>
+    </div>
+    
+    <ul class="slideshow">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <section class="container-fluid section">
+        <br>
+        <br>
+        <div class="container" data-aos="fade-up">
+            <h2 class="display-2 text-center"><strong>About</strong></h2>
+            <p class="lead">
+                This application implements a front-end to the bulletr package, developed by CSAFE. Two sample bullets 
+                from Barrel 1 of the Hamby bullet set are provided, each containing six individual lands. You can also 
+                upload your own bullet lands as x3p files.
+            </p>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="container" data-aos="fade-up">
+            <h2 class="display-2 text-center"><strong>Instructions</strong></h2>
+            <p class="lead">
+                This app will walk through the steps used to programmatically determine the probability that two bullets 
+                were fired from the same gun barrel. We compare at the bullet land level.
+                <br>
+                <br>
+
+                <strong>
+                    To begin, choose or upload two .x3p files representing the two bullet lands you wish to 
+                    compare.
+                </strong>
+                <br>
+                <br>
+
+                This work was developed in collaboration with Omni Analytics Innovative Technologies Initiaitve (OAITI) 
+                and the Center for Statistics and Applications in Forensic Evidence (CSAFE) at Iowa State University. 
+                These procedures are fully open-source and transparent. For more details on the underlying code, please 
+                see the GitHub repository for the companion R package bulletr.
+                <br>
+                <br>
+
+                Hare, E., Hofmann, H., and Carriquiry, A., Algorithmic Approaches to Match Degraded Land 
+                Impressions. Law, Probability and Risk, mgx018, https://doi.org/10.1093/lpr/mgx018
+                <br>
+                
+                Hare, E., Hofmann, H., and Carriquiry, A., Automatic Matching of Bullet Land Impressions. 
+                Annals of Applied Statistics. doi: 10.1214/17-AOAS1080
+            </p>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="container" data-aos="fade-up">
+            <h2 class="display-2 text-center"><strong>Bullet Land Surface</strong></h2>
+            <div class="container text-center row">
+                <img src="./imgs/bullet1.png" class="img-fluid col-4">
+                <img src="./imgs/bullet2.png" class="img-fluid col-4">
+                <img src="./imgs/bullet3.png" class="img-fluid col-4">
+            </div>
+            <br>
+            <div class="container text-center row">
+                <img src="./imgs/bullet4.png" class="img-fluid col-4">
+                <img src="./imgs/bullet5.png" class="img-fluid col-4">
+                <img src="./imgs/bullet6.png" class="img-fluid col-4">
+            </div>
+            <br>
+            <div class="container text-center row">
+                <img src="./imgs/bullet7.png" class="img-fluid col-4">
+                <img src="./imgs/bullet8.png" class="img-fluid col-4">
+                <img src="./imgs/bullet9.png" class="img-fluid col-4">
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="container" data-aos="fade-up">
+            <h2 class="display-2 text-center"><strong>Upload</strong></h2>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">First Image</label>
+                    <input type="text" class="form-control" placeholder="First Image">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Second Image</label>
+                    <input type="text" class="form-control" placeholder="Second Image">
+                </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+        </div>
+        <br>
+        <br>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
+    crossorigin="anonymous"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 330,
+            duration: 600,
+            easing: 'ease',
+            once: true
+        });
+    </script>
+</body>
+</html>
